@@ -1,0 +1,166 @@
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+/* </style> */
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.cards{
+  display: flex;
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  /* box-sizing: border-box; */
+  /* border: 2px solid #c6c3c3; */
+  /* box-shadow: 5px 5px 10px #cecece , -5px -5px 10px #cecece; */
+  font-family: 'Permanent Marker', cursive;
+  /* border-radius: 10px; */
+}
+.h1{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+  width: 25%;
+}
+.icons{
+  font-size: 34px;
+}
+.card{
+  /* border: 2px solid red; */
+  background-image: none;
+  width: 40vh;
+  border-radius: 8px;
+  margin: 0px 15px;
+  padding: 5px;
+  /* box-shadow: 0 1px 5px rgb(138 137 137); */
+  border: 2px solid rgb(207 205 205);
+  background-color: #e0e0e024;
+  transition: all 0.5s ease;
+}
+.card:hover{
+  /* background-color: #e0e0e09c; */
+  /* border: none; */
+  box-shadow: 5px 5px 10px rgb(92 85 85 / 33%);
+  cursor: pointer;
+}
+.card .content{
+  font-size: 17px;
+  height: 8vh;
+  padding: 10px;
+  /* overflow-x: ; */
+  text-overflow: ellipsis;
+  transition: 0.8s ease-in-out;
+  /* overflow-x: scroll; */
+}
+/* .card .content:hover{
+  overflow: scroll;
+  text-overflow: unset;
+} */
+.date{
+  height: 3vh;
+  padding: 10px;
+}
+.title{
+  font-size: 25px;
+  height: 2vh;
+  padding: 10px;
+  font-weight: bold;
+}
+/* .title:active{
+  padding: 10px;
+  font-size: 10px;
+} */
+h4{
+  font-size: 25px;
+}
+.deletebtn{
+  margin-left: 30vh;
+  padding: 6px 12px;
+  border-radius: 25%;
+  background-color: black;
+  color: white;
+  border: none;
+  position: relative;
+  top: -8px;
+}
+.deletebtn:hover{
+background-color: red;
+transition: all 0.2s ease-in-out;
+}
+.dates{
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  height: 10vh;
+}
+input[type="date"]{
+  background-color: #0080ff;
+  padding: 10px;
+  width: 20%;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+::-webkit-calendar-picker-indicator{
+  background-color: white;
+  padding: 3px;
+  border-radius: 3px;
+}
+.add{
+  opacity: 1;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  /* text-transform: uppercase; */
+}
+
+.add::before{
+  /* top: 0; */
+  left: 20px;
+  /* display: inline-flex; */
+  transition: 0.5s;
+}
+
+.add::after {
+  right: 19px;
+  position: relative;
+  border: none;
+}
+
+.add::before{
+  content: attr(data-back);
+  /* padding: 0 10px; */
+  opacity: 1;
+  position: relative;
+  transform: translateY(0) rotateX(0);
+}
+.add::after{
+  content: attr(data-front);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-50%) rotateY(90deg);
+  transition: 0.5s;
+}
+.add:hover:before{
+  opacity: 0;
+  transform: translateY(50%) rotateY(90deg);
+}
+.add:hover::after{
+  /* background-color: green; */
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.add{
+  text-align: center;
+}
+/* button .add :active{
+  background-color: green;
+} */
